@@ -1,11 +1,11 @@
-import { useTranslations } from "next-intl";
+import HeroSection from "@/components/HeroSection";
+import NewsTicker from "@/components/NewsTicker";
 
 export default function HomePage() {
-  const t = useTranslations("home");
   return (
-    <main>
-      <h1>{t("featured")}</h1>
-      <p>CAMEROUN SOIR Hebdo</p>
+    <main className="flex-1">
+      <HeroSection />
+      <NewsTicker />
     </main>
   );
 }
