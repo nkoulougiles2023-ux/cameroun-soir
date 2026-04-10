@@ -90,7 +90,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {NAV_ITEMS.map(({ key, slug }) => (
               <li key={key}>
                 <Link
-                  href={`/category/${slug}`}
+                  href={`/${slug}` as Parameters<typeof Link>[0]["href"]}
                   onClick={onClose}
                   className="block px-6 py-3.5 text-white/80 hover:text-white hover:bg-teal-brand/20 border-b border-white/5 transition-colors text-sm font-medium"
                 >

@@ -86,7 +86,7 @@ export default function Header() {
               {NAV_ITEMS.map(({ key, slug }) => (
                 <li key={key}>
                   <Link
-                    href={`/category/${slug}`}
+                    href={`/${slug}` as Parameters<typeof Link>[0]["href"]}
                     className="block px-3 py-2 text-xs font-semibold tracking-wide uppercase hover:bg-teal-dark/60 hover:underline underline-offset-2 transition-colors whitespace-nowrap"
                   >
                     {t(`nav.${key}`)}
