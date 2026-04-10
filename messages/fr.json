@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "politique": "Politique",
+    "economie": "Economie",
+    "societe": "Societe",
+    "actionPublique": "Action Publique",
+    "international": "International",
+    "tribunes": "Tribunes & Opinions",
+    "enquetes": "Enquetes",
+    "institutionnel": "Institutionnel",
+    "search": "Rechercher..."
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "mostRead": "Les plus lus",
+    "atKiosk": "En kiosque",
+    "newsletter": "Newsletter",
+    "subscribe": "S'abonner",
+    "share": "Partager",
+    "breakingNews": "ALERTE INFO",
+    "institutionalContent": "Contenu Institutionnel",
+    "relatedArticles": "Articles similaires",
+    "publishedOn": "Publie le",
+    "by": "Par",
+    "views": "vues",
+    "email": "Votre email",
+    "allRightsReserved": "Tous droits reserves",
+    "slogan": "Au coeur de l'action publique",
+    "signature": "La ou se construit l'action publique",
+    "contact": "Contact",
+    "legal": "Mentions legales",
+    "about": "A propos"
+  },
+  "home": {
+    "featured": "A la une",
+    "latest": "Dernieres actualites",
+    "categorySection": "Decouvrez nos rubriques"
+  }
+}

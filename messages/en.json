@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "politique": "Politics",
+    "economie": "Economy",
+    "societe": "Society",
+    "actionPublique": "Public Action",
+    "international": "International",
+    "tribunes": "Opinions & Editorials",
+    "enquetes": "Investigations",
+    "institutionnel": "Institutional",
+    "search": "Search..."
+  },
+  "common": {
+    "readMore": "Read more",
+    "mostRead": "Most read",
+    "atKiosk": "Current edition",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "share": "Share",
+    "breakingNews": "BREAKING NEWS",
+    "institutionalContent": "Institutional Content",
+    "relatedArticles": "Related articles",
+    "publishedOn": "Published on",
+    "by": "By",
+    "views": "views",
+    "email": "Your email",
+    "allRightsReserved": "All rights reserved",
+    "slogan": "At the heart of public action",
+    "signature": "Where public action is built",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "about": "About"
+  },
+  "home": {
+    "featured": "Headlines",
+    "latest": "Latest news",
+    "categorySection": "Explore our sections"
+  }
+}
