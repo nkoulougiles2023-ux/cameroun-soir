@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getArticleBySlug, getArticlesByCategory, formatDate } from "@/lib/utils";
 import { articles } from "@/data/articles";
 import { categories } from "@/data/categories";
@@ -39,6 +39,7 @@ export default async function ArticlePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("common");
 
   const article = getArticleBySlug(slug);

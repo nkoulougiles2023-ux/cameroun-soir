@@ -100,7 +100,7 @@ export default function Footer() {
               {leftLinks.map(({ key, slug }) => (
                 <Link
                   key={key}
-                  href={`/category/${slug}`}
+                  href={`/${slug}`}
                   className="text-sm text-white/70 hover:text-teal-brand hover:underline underline-offset-2 transition-colors"
                 >
                   {t(`nav.${key}`)}
@@ -109,7 +109,7 @@ export default function Footer() {
               {rightLinks.map(({ key, slug }) => (
                 <Link
                   key={key}
-                  href={`/category/${slug}`}
+                  href={`/${slug}`}
                   className="text-sm text-white/70 hover:text-teal-brand hover:underline underline-offset-2 transition-colors"
                 >
                   {t(`nav.${key}`)}

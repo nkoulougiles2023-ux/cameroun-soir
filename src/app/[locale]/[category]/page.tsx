@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getArticlesByCategory, getCategoryBySlug } from "@/lib/utils";
 import { categories } from "@/data/categories";
 import { CategorySlug } from "@/lib/types";
@@ -32,6 +32,7 @@ export default async function CategoryPage({
   params: Promise<{ locale: string; category: string }>;
 }) {
   const { locale, category } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("common");
 
   const cat = getCategoryBySlug(category);
