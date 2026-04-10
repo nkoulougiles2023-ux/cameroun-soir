@@ -125,7 +125,7 @@ export default function Footer() {
                 {t("common.contact")}
               </h3>
               <p className="text-sm text-white/70 leading-relaxed">
-                (+237) 6 96 52 46 40&nbsp;/&nbsp;6 58 76 20 38
+                (+237) 6 91 60 27 99
               </p>
             </div>
 

@@ -46,7 +46,7 @@ export default function Header() {
             {/* Right side: phone + language */}
             <div className="flex items-center gap-4 ml-auto">
               <span className="opacity-70 tracking-wide hidden sm:inline">
-                (+237) 6 96 52 46 40 &nbsp;/&nbsp; 6 58 76 20 38
+                (+237) 6 91 60 27 99
               </span>
               <LanguageSwitcher />
             </div>
