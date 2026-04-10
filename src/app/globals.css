@@ -1,15 +1,35 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand Colors - Cameroun Soir Hebdo */
+  --color-teal-brand: #2B8C8C;
+  --color-teal-dark: #1E6B6B;
+  --color-teal-light: #3AA8A8;
+
+  /* Dark Theme */
+  --color-dark-primary: #1A1A2E;
+  --color-dark-secondary: #16213E;
+
+  /* Accent */
+  --color-red-brand: #E63946;
+
+  /* Institutional Content (Contenu Institutionnel) */
+  --color-institutional-bg: #FDF6E3;
+  --color-institutional-border: #D4A843;
+  --color-institutional-badge: #B8860B;
+
+  /* Base */
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
