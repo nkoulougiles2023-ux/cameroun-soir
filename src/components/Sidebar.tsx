@@ -64,7 +64,7 @@ export default function Sidebar() {
           N° 42 — Avril 2026
         </p>
 
-        <button className="w-full bg-teal-brand text-white text-sm font-semibold py-2 rounded hover:opacity-90 transition-opacity">
+        <button className="w-full bg-teal-brand text-white text-sm font-semibold py-2 rounded hover:opacity-90 transition-all duration-200">
           {t("readMore")}
         </button>
       </div>
@@ -87,7 +87,7 @@ export default function Sidebar() {
             placeholder={t("email")}
             className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-brand"
           />
-          <button className="w-full bg-red-brand text-white text-sm font-semibold py-2 rounded hover:opacity-90 transition-opacity">
+          <button className="w-full bg-red-brand text-white text-sm font-semibold py-2 rounded hover:opacity-90 transition-all duration-200">
             {t("subscribe")}
           </button>
         </div>

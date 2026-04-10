@@ -25,8 +25,8 @@ export default function ArticleCard({ article, variant = "vertical" }: ArticleCa
   const formattedDate = formatDate(article.date, locale);
 
   const wrapperClasses = article.isInstitutional
-    ? "bg-institutional-bg border border-institutional-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-    : "bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow";
+    ? "group bg-institutional-bg border border-institutional-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+    : "group bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300";
 
   if (variant === "horizontal") {
     return (
@@ -36,7 +36,7 @@ export default function ArticleCard({ article, variant = "vertical" }: ArticleCa
           <img
             src={article.image}
             alt={title}
-            className="w-full h-full object-cover aspect-video"
+            className="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-300"
           />
         </div>
 
@@ -75,7 +75,7 @@ export default function ArticleCard({ article, variant = "vertical" }: ArticleCa
         <img
           src={article.image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
 

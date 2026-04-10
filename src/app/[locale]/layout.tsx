@@ -18,8 +18,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cameroun Soir Hebdo",
-  description: "Au coeur de l'action publique",
+  title: {
+    default: "CAMEROUN SOIR Hebdo — Au coeur de l'action publique",
+    template: "%s | CAMEROUN SOIR Hebdo",
+  },
+  description:
+    "Presse écrite d'analyse bilingue. L'actualité décryptée avec rigueur et exigence. Analyses, enquêtes et éclairages pour comprendre l'action publique au Cameroun.",
+  keywords: [
+    "Cameroun",
+    "actualités",
+    "presse",
+    "analyse",
+    "action publique",
+    "news",
+    "Cameroon",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "CAMEROUN SOIR Hebdo",
+    locale: "fr_CM",
+  },
 };
 
 export default async function LocaleLayout({
@@ -35,7 +53,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>

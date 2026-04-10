@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getArticlesByCategory, getCategoryBySlug } from "@/lib/utils";
 import { categories } from "@/data/categories";
@@ -9,6 +10,20 @@ import { Link } from "@/i18n/navigation";
 
 export function generateStaticParams() {
   return categories.map((cat) => ({ category: cat.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; category: string }>;
+}): Promise<Metadata> {
+  const { locale, category } = await params;
+  const cat = getCategoryBySlug(category);
+  if (!cat) return {};
+  return {
+    title: cat.label[locale as "fr" | "en"],
+    description: cat.description[locale as "fr" | "en"],
+  };
 }
 
 export default async function CategoryPage({

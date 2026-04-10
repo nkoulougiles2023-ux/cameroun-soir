@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getArticleBySlug, getArticlesByCategory, formatDate } from "@/lib/utils";
 import { articles } from "@/data/articles";
@@ -11,6 +12,25 @@ import { Link } from "@/i18n/navigation";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const article = getArticleBySlug(slug);
+  if (!article) return {};
+  return {
+    title: article.title[locale as "fr" | "en"],
+    description: article.excerpt[locale as "fr" | "en"],
+    openGraph: {
+      title: article.title[locale as "fr" | "en"],
+      description: article.excerpt[locale as "fr" | "en"],
+      images: [article.image],
+    },
+  };
 }
 
 export default async function ArticlePage({
